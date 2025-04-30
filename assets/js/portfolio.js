@@ -51,10 +51,10 @@ const tab = ["short-video", "long-video", "graphics", "script"]
 //     videoType: "script"
 //   }
 // ];
-const image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s'
+
 const newCardData = [{
   title: "Short Video",
-  url: image,
+  url: "assets/images/short.jpg",
   mimeType: "image",
   category: "short_video",
   content: [
@@ -86,7 +86,7 @@ const newCardData = [{
 },
 {
   title: "Long Video",
-  url: image,
+  url: "assets/images/long.jpg",
   mimeType: "image",
   category: "long_video",
   content: [
@@ -106,7 +106,7 @@ const newCardData = [{
 },
 {
   title: "Script Video",
-  url: image,
+  url: "assets/images/script.jpg",
   mimeType: "image",
   category: "script_video",
   content: [
@@ -126,7 +126,7 @@ const newCardData = [{
 },
 {
   title: "Graphics Video",
-  url: image,
+  url: "assets/images/design.jpg",
   mimeType: "image",
   category: "graphics_video",
   content: [
