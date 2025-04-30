@@ -59,7 +59,7 @@ const newCardData = [{
   category: "short_video",
   content: [
     {
-      title: "short video title 1",
+      title: "Short Video Title 1",
       category: "",
       priceRange: { min: 1500, max: 3000 },
       discountPrice: 0,
@@ -71,7 +71,7 @@ const newCardData = [{
       mimeType: "video"
     },
     {
-      title: "short video title 2",
+      title: "Short Video Title 2",
       category: "",
       priceRange: { min: 20000, max: 30000 },
       discountPrice: 0,
@@ -92,7 +92,7 @@ const newCardData = [{
   content: [
     {
       mimeType: "video",
-      title: "long video title",
+      title: "Long Video Title",
       category: "",
       priceRange: { min: 1500, max: 3000 },
       discountPrice: 0,
@@ -112,7 +112,7 @@ const newCardData = [{
   content: [
     {
       mimeType: "video",
-      title: "script video title",
+      title: "Script Video Title",
       category: "",
       priceRange: { min: 1500, max: 3000 },
       discountPrice: 0,
@@ -132,7 +132,7 @@ const newCardData = [{
   content: [
     {
       mimeType: "video",
-      title: "graphics video title",
+      title: "Graphics Video Title",
       category: "",
       priceRange: { min: 1500, max: 3000 },
       discountPrice: 0,
