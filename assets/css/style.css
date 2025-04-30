@@ -23,6 +23,7 @@ Global Styles - Optimized
   --transition: all 0.3s ease;
   --container-padding: clamp(1rem, 5vw, 2rem);
   --section-spacing: clamp(3rem, 8vw, 5rem);
+  --bs-btn-close-color:⬜;
 }
 
 body {
