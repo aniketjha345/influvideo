@@ -504,6 +504,34 @@ Footer
   color: var(--text-light);
 }
 
+    /* footer-social */
+
+.footer-social{
+  display: inline-flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap:4px;
+  padding: 5px;
+  /* border: 1px solid red; */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--orange-accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  
+  .social-icon:hover {
+    background: var(--gradient);
+    color: white;
+    transform: translateY(-3px);
+  }
+}
+
 /* 
 ==================================
 Responsive Styles
