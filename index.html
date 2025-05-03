@@ -120,7 +120,7 @@
     .hero-content {
       position: relative;
       z-index: 3;
-      padding: 4rem;
+      /* padding: 4rem; */
       background-color: var(--dark-card);
       border-radius: 20px;
       max-width: 750px;
@@ -432,27 +432,9 @@
       border-color: var(--primary);
     }
     
-    @media (max-width: 992px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-      
-      .hero-content {
-        margin: 0 20px;
-        max-width: 350px;
-      }
-    }
+
     
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      
-      .hero-content {
-        padding: 2.5rem 1.5rem;
-        margin: 0 auto;
-      }
-    }
+
     
     /* Animation styles */
     .animate-on-scroll {
@@ -779,46 +761,7 @@
       border-color: transparent;
     }
 
-    @media (max-width: 768px) {
-      .portfolio-title {
-        font-size: 2.5rem;
-      }
-      
-      .portfolio-thumb {
-        height: 220px;
-      }
 
-      .filter-btn {
-        padding: 0.6rem 1.25rem;
-        font-size: 0.9rem;
-      }
-    }
-    
-    /* Mobile responsiveness fixes */
-    @media (max-width: 576px) {
-      .hero-content {
-        padding: 2rem;
-        margin: 0 1rem;
-        max-width: 100%;
-      }
-      
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      
-      .intro-services h2 {
-        font-size: 3rem !important;
-      }
-      
-      .testimonial-card {
-        padding: 1.5rem;
-      }
-      
-      .client-image {
-        width: 50px;
-        height: 50px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -863,7 +806,7 @@
       <img src="assets/images/portfolio/portfolio-1.jpg" alt="Background">
     </video>
     <div class="hero-overlay"></div>
-    <div class="container">
+    <div class="container center">
       <div class="hero-content">
         <h1 class="hero-title">
           Editing is an art — and we’re the  
