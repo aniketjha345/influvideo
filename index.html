@@ -296,12 +296,50 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .portfolio-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .arrow-btn {
+      background-color: var(--orange-accent);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .arrow-btn:hover {
+      background-color: var(--orange-light);
+      transform: translateY(-3px);
+    }
+
+    .contact-btn {
+      background-color: var(--orange-accent);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: none;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--orange-light);
+      transform: translateY(-3px);
+      color: #fff;
+      text-decoration: none;
     }
     
     .portfolio-info {
@@ -528,7 +566,233 @@
       margin-bottom: 1rem;
     }
     
+    /* Enhanced styles for portfolio section */
+    .portfolio-section {
+      padding: 120px 0;
+      position: relative;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
 
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 100px;
+      background: rgba(255, 79, 0, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 79, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filter-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--orange-accent), #FF6B2B);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    .filter-btn:hover::after,
+    .filter-btn.active::after {
+      opacity: 1;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 79, 0, 0.3);
+      border-color: transparent;
+    }
+
+    .portfolio-card {
+      background: rgba(30, 30, 30, 0.5);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 79, 0, 0.3);
+    }
+
+    .portfolio-thumb {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+
+    .portfolio-thumb img,
+    .portfolio-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-card:hover .portfolio-thumb img,
+    .portfolio-card:hover .portfolio-thumb video {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .overlay-content {
+      text-align: center;
+      color: white;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    .portfolio-card:hover .overlay-content {
+      transform: translateY(0);
+    }
+
+    .overlay-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--orange-accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .overlay-icon:hover {
+      transform: translateY(-3px) scale(1.1);
+      background: white;
+      color: var(--orange-accent);
+    }
+
+    .portfolio-info {
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .portfolio-info h4 {
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .portfolio-info p {
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .portfolio-bg-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255,79,0,0.1) 0%, rgba(255,79,0,0) 100%);
+      animation: gradientAnimation 8s ease infinite;
+      z-index: 1;
+    }
+
+    @keyframes gradientAnimation {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 0.3; }
+    }
+
+    .explore-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      border: 2px solid var(--orange-accent);
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .explore-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--orange-accent), #FF6B2B);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    .explore-btn:hover::after {
+      opacity: 1;
+    }
+
+    .explore-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 79, 0, 0.3);
+      border-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-title {
+        font-size: 2.5rem;
+      }
+      
+      .portfolio-thumb {
+        height: 220px;
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.9rem;
+      }
+    }
     
     /* Mobile responsiveness fixes */
     @media (max-width: 576px) {
@@ -718,42 +982,224 @@
   
 
 
-  <!-- Portfolio Section -->
-  <section class="portfolio-section py-5" style="background-color: var(--orange-accent); color: #ffffff; padding: 120px 0; text-align: center; position: relative; overflow: hidden;">
-    <!-- Left Silhouette -->
-    <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); opacity: 0.1;">
-      <i class="fas fa-camera" style="font-size: 15rem; color: var(--orange-accent);"></i>
-    </div>
-    <!-- Right Silhouette -->
-    <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); opacity: 0.1;">
-      <i class="fas fa-video" style="font-size: 15rem; color: var(--orange-accent);"></i>
-    </div>
+  <section class="portfolio-section py-5 position-relative" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); overflow: hidden;">
+    <!-- Background Animation -->
+    <div class="portfolio-bg-animation"></div>
     
-    <div class="container position-relative" style="z-index: 2;">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8">
-          <h2 class="section-title" style="font-size: 5rem; font-weight: 800; margin-bottom: 2rem; letter-spacing: -1px;">
-            <span style="color: #ffffff; position: relative;">
-              Portfolio</span>
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-uppercase mb-3" style="color: var(--orange-accent); letter-spacing: 2px; font-weight: 600;">Our Work</h6>
+          <h2 class="portfolio-title mb-4" style="font-size: 3.5rem; font-weight: 800; color: white; text-transform: uppercase;">
+            Portfolio
+            <span class="highlight-text" style="color: var(--orange-accent)">.</span>
           </h2>
-          <p class="text-light" style="font-size: 1.2rem; line-height: 1.8; opacity: 0.9; max-width: 650px; margin: 0 auto 3rem;">
-            Our work speaks for itself. Here’s a glimpse into the stories we’ve shaped through editing, design, and scripting.
+          <p class="portfolio-description" style="font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">
+            Our portfolio showcases the trust our clients place in us. Each project represents our commitment to excellence and creativity in delivering exceptional results.
           </p>
-          <a href="portfolio.html" class="contact-btn portfolio-btn" style="background-color: transparent; border: 2px solid #ffffff; color: #ffffff; font-size: 1.2rem; padding: 1rem 2.5rem; transition: all 0.4s ease; position: relative; overflow: hidden;">
-            <span style="position: relative; z-index: 2;">Explore Our Work <i class="fas fa-arrow-right ms-2"></i></span>
-            <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: #ffffff; transition: all 0.4s ease;"></div>
-          </a>
-          <style>
-            .portfolio-btn:hover {
-              color: var(--orange-accent) !important;
-            }
-            .portfolio-btn:hover div {
-              left: 0;
-            }
-          </style>
         </div>
       </div>
+
+      <div class="row g-4">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="assets/images/design.jpg" alt="Design Project" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h4>Brand Design</h4>
+                  <p>Creative Direction</p>
+                  <a href="portfolio.html" class="portfolio-link">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="assets/images/script.jpg" alt="Video Project" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h4>Video Production</h4>
+                  <p>Storytelling</p>
+                  <a href="portfolio.html" class="portfolio-link">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="assets/images/long.jpg" alt="Marketing Project" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h4>Digital Marketing</h4>
+                  <p>Social Media</p>
+                  <a href="portfolio.html" class="portfolio-link">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="portfolio.html" class="explore-btn">
+          Explore All Projects
+          <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
     </div>
+
+    <style>
+      .portfolio-section {
+        padding: 120px 0;
+        position: relative;
+      }
+
+      .portfolio-bg-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,79,0,0.1) 0%, rgba(255,79,0,0) 100%);
+        animation: gradientAnimation 8s ease infinite;
+        z-index: 1;
+      }
+
+      @keyframes gradientAnimation {
+        0% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.2); opacity: 8; }
+        100% { transform: scale(1); opacity: 0.5; }
+      }
+
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        transform: translateY(0);
+        transition: all 0.5s ease;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .portfolio-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      .portfolio-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .portfolio-item:hover .portfolio-image img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .portfolio-content {
+        padding: 20px;
+        color: white;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+      }
+
+      .portfolio-item:hover .portfolio-content {
+        transform: translateY(0);
+      }
+
+      .portfolio-content h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-content p {
+        font-size: 1rem;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      .portfolio-link {
+        display: inline-block;
+        padding: 10px 25px;
+        background: var(--orange-accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .portfolio-link:hover {
+        background: white;
+        color: var(--orange-accent);
+        transform: translateY(-3px);
+      }
+
+      .explore-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: transparent;
+        color: white;
+        text-decoration: none;
+        border: 2px solid var(--orange-accent);
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 40px;
+      }
+
+      .explore-btn:hover {
+        background: var(--orange-accent);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 79, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .portfolio-title {
+          font-size: 2.5rem;
+        }
+        
+        .portfolio-image img {
+          height: 250px;
+        }
+      }
+    </style>
   </section>
 
 <!-- Testimonials Section -->
