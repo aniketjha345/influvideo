@@ -1627,8 +1627,9 @@ Hero Sections - Common Styles
   
 }
 
-.h1{
-  font-size: 2rem;
+.h2{
+  font-size: 4rem;
+  font-weight: 700;
 }
 @media (max-width: 575.98px) {
  
@@ -1670,6 +1671,10 @@ Hero Sections - Common Styles
  
 
   }
+  .h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
  
 
   /* home page */
@@ -1688,6 +1693,7 @@ Hero Sections - Common Styles
  .hero-content{
   padding: 4rem;
  }
+
 
 }
 
