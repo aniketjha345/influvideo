@@ -491,9 +491,10 @@ Footer
 }
 
 .contact-info i {
-  width: 24px;
-  margin-right: 0.75rem;
+  /* width: 24px; */
+  /* margin-right: 0.75rem; */
   color: var(--primary);
+  
 }
 
 .footer-bottom {

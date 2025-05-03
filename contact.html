@@ -25,21 +25,27 @@
   
   <!-- Additional CSS for Contact Page -->
   <style>
-    social-link:hover {
+    .social-link:hover {
       background: var(--gradient);
     color: white;
     transform: translateY(-3px);
+
+    i{
+      color: #ffffff;
     }
+    }
+    .social-link:hover
 
     .nav-contact-btn {
       text-decoration: none;
     }
 
     .contact-section {
-      padding: 6rem 2rem 7rem;
+      /* padding: 6rem 2rem 7rem; */
       background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
       position: relative;
       overflow: hidden;
+      padding-top: 120px;
     }
     
     .contact-section::before {
@@ -322,6 +328,23 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media (max-width:580px) {
+
+      .contact-form-container{
+        padding: 1rem;
+        .contact-form{
+          padding: .9rem 1.5rem;
+        }
+      }
+      .info-card{
+        padding: 1rem;
+      }
+      .btn-submit{
+        padding: 1rem;
+      }
+
+    }
   </style>
 </head>
 <body>
@@ -360,7 +383,7 @@
 
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
-    <div class="section-inner">
+    <div class="section-inner p-2 p-sm-4">
       <h2 class="section-title gradient-text">Get In Touch</h2>
       <p class="section-description">
         Ready to start your video project? Contact us to discuss your needs and bring your vision to life.
