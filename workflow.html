@@ -26,10 +26,11 @@
   <!-- Additional CSS for Workflow Page -->
   <style>
     .workflow-section {
-      padding: 6rem 2rem;
+      /* padding: 6rem 2rem; */
       background: var(--body-bg);
       position: relative;
       overflow: hidden;
+      margin-top: 120px;
     }
     
     .workflow-section::before {
@@ -150,12 +151,7 @@
       border: 1px solid var(--border-color);
     }
     
-    @media (max-width: 992px) {
-      .step-content {
-        width: calc(100% - 80px);
-        margin: 0 0 0 20px;
-      }
-    }
+ 
     
     .step-content h3 {
       font-size: 1.4rem;
@@ -198,6 +194,35 @@
     .cta-button i {
       margin-right: 10px;
     }
+
+.ct-button{ 
+      width: 50% ;
+}
+     
+
+    @media (max-width:580px) {
+
+      .process-container::before{
+        left: 20px;
+      }
+      .process-step{
+        .timeline-node{
+          width: 40px;
+          height: 40px;
+        }
+        .step-content{
+          padding: 1rem;
+          margin: 0 10px;
+      width: 100%;
+
+        }
+      }
+      .ct-button{
+        width: 100%;
+      }
+      
+      
+    }
   </style>
 </head>
 <body>
@@ -235,7 +260,7 @@
   </nav>
 
   <!-- Workflow Section -->
-  <section class="workflow-section" id="workflow">
+  <section class="workflow-section p-2 p-sm-4" id="workflow">
     <div class="section-inner">
       <h2 class="section-title">Our Work Process</h2>
       <p class="section-description text-center mb-5">
@@ -316,10 +341,15 @@
         </div>
       </div>
       
-      <div class="cta-container">
-        <a href="contact.html" class="cta-button">
-          <i class="far fa-calendar-alt"></i>
-          Ready to start your project? Contact us today!
+      <div class="cta-container d-flex flex-column">
+        <a href="contact.html" class=" d-flex flex-column align-items-center">
+          <p style=" color: #fff;">Ready to start your project</p>
+          <button type="button" style="background: linear-gradient(135deg, var(--primary), var(--accent));  color: #fff;" class="ct-button d-flex border-0 rounded-2 p-2 gap-2 center ">
+            <i class="far fa-calendar-alt">
+            </i>
+            Contact us today!
+          </button>
+          
         </a>
       </div>
     </div>
