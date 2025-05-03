@@ -1627,6 +1627,9 @@ Hero Sections - Common Styles
   
 }
 
+.h1{
+  font-size: 2rem;
+}
 @media (max-width: 575.98px) {
  
 
@@ -1690,23 +1693,17 @@ Hero Sections - Common Styles
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    background-color: lightyellow;
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    background-color: lightcoral;
-  }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  body {
-    background-color: lightgray;
-  }
+
 }
 
 /* comman style devices (large desktops, 1200px and up) */
